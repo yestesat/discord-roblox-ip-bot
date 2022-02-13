@@ -18,8 +18,16 @@ class Kill(commands.Cog):
     
     @commands.command()
     @commands.has_role(whitelist_role)
-    async def kill(self, ctx, url: str, time: str):
-        pass
+    async def kill(self, ctx, link: str, time: str):
+        if "www.roblox.com/games/" not in link:
+            return
+        placeid = link.split("/")[4]    
+        
+        if placeid.isdigit() == False:
+            return
+
+        scraper = Scraper(placeid)
+        scraper.set_placeid(placeid)
 
 
 def setup(bot):

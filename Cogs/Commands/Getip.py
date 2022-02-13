@@ -35,7 +35,7 @@ class Getip(commands.Cog):
         for i in range(len(pack)):
             info = pack[i]
             string += "[ Server {} ({}/{}) | {}:{} | {}ms ]\n".format(
-                str((i + 1)).zfill(2),
+                str(i + 1).zfill(2),
                 info["players"],
                 info["maxPlayers"],
                 info["ip"],

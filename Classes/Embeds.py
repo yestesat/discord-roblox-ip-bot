@@ -10,3 +10,4 @@ def embed_msg(description: str, footer: str):
         timestamp=datetime.utcnow(),
         colour=288429,
     ).set_footer(text=footer)
+    

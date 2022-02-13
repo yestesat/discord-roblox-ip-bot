@@ -4,13 +4,6 @@ import json
 from discord.ext import commands
 
 
-####################################################################
-### READ THE README.MD # READ THE README.MD # READ THE README.MD ###
-### READ THE README.MD # READ THE README.MD # READ THE README.MD ###
-### READ THE README.MD # READ THE README.MD # READ THE README.MD ###
-####################################################################
-
-
 # Edit this how you want
 activity = discord.Streaming(name="Subject Testing..", url="https://www.twitch.tv/testing")
 bot_prefix = "$"

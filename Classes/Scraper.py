@@ -92,4 +92,79 @@ class Scraper():
             "package": pack,
             "title": title
         }
- 
+
+
+    async def get_basic_information(self):
+        gamev1 = await self.get(
+            f"https://games.roblox.com/v1/games/{self.placeid}/servers/Public?sortOrder=Asc&limit=25",
+            self.headers
+        )
+        data = gamev1["data"]
+        pack = []
+
+        for i,_ in enumerate(data):
+            pack.append(
+                {
+                    "jobId": data[i]["id"],
+                    "players": data[i]["playing"],
+                    "ping": data[i]["ping"],
+                    "maxPlayers": data[i]["maxPlayers"] 
+                }
+            )
+
+        title = await self.get(
+            f"https://games.roblox.com/v1/games/multiget-place-details?placeids={self.placeid}",
+            self.headers
+        )
+        title = title[0]["name"]
+        
+        return {
+            "package": pack,
+            "title": title
+        }
+
+
+    async def information_from_jobid(self, jobid: str):
+        information = await self.post(
+            f"https://assetgame.roblox.com/Game/PlaceLauncher.ashx?request=RequestGameJob&placeId={self.placeid}&gameId={jobid}",
+            self.headers
+        )
+        join_script_url = information["joinScriptUrl"]
+
+        if join_script_url == None:
+            return False
+
+        jsr = await self.post(
+            join_script_url,
+            self.headers,
+            True
+        )
+        server_information = json.loads(jsr.split("==%")[1])
+
+        title = await self.get(
+            f"https://games.roblox.com/v1/games/multiget-place-details?placeids={self.placeid}",
+            self.headers
+        )
+        title = title[0]["name"]
+
+        return {
+            "package": {
+                "ip": server_information["MachineAddress"],
+                "port": server_information["ServerPort"]
+            },
+            "title": title
+        }
+
+
+    async def get_universe_from_placeid(self):
+        return await self.get(
+            f"https://api.roblox.com/universes/get-universe-containing-place?placeid={self.placeid}",
+            self.headers
+        )
+
+
+    async def get_places_in_universe(self, universeid: str):
+        return await self.get(
+            f"https://develop.roblox.com/v1/universes/{universeid}/places?sortOrder=Asc&limit=25",
+            self.headers
+        )
