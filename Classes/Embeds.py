@@ -3,7 +3,7 @@ from discord import Embed
 from datetime import datetime
 
 
-def embed_msg(description, footer):
+def embed_msg(description: str, footer: str):
     return Embed(
         title="",
         description=description,

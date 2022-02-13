@@ -10,7 +10,7 @@ class Global(commands.Cog):
 
 
     @commands.Cog.listener()
-    async def on_command_error(self, ctx, error):
+    async def on_command_error(self, ctx, error: str):
 
         # Lots of room for expansion. But this is basically all we need for this.
         if isinstance(error, commands.CommandNotFound):

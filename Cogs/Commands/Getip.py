@@ -48,12 +48,6 @@ class Getip(commands.Cog):
 
         return await ctx.send(embed=embed_msg(f"```ini\n{string}\n```", ctx.message.author))
 
-
-
         
-
-
 def setup(bot):
     bot.add_cog(Getip(bot))
-
-

@@ -23,5 +23,3 @@ class Hit(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Hit(bot))
-
-

@@ -2,7 +2,6 @@ import aiohttp
 import json
 
 
-
 with open("./config.json", "r") as r:
     cookie = json.load(r)["roblox"]["cookie"]
 
@@ -40,7 +39,7 @@ class Scraper():
                 return await res.text()
 
 
-    def set_placeid(self, placeid):
+    def set_placeid(self, placeid: str):
         self.placeid = placeid
 
 
@@ -93,9 +92,4 @@ class Scraper():
             "package": pack,
             "title": title
         }
-
-
-
-
-
-    
+ 
