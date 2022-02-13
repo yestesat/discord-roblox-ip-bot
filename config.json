@@ -1,0 +1,15 @@
+{
+    "discord": {
+        "token": ""
+    },
+    "roblox": {
+        "cookie": ""
+    },
+    "roles": {
+        "getip": "1",
+        "hit": "1",
+        "kill": "1",
+        "plr": "1",
+        "universe": "1"
+    }
+}
