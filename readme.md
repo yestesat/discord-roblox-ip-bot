@@ -28,3 +28,6 @@ bot.load_extension("Cogs.Commands.Plr")
 # bot.load_extension("Cogs.Commands.Universe")
 ```
 You just disabled the `universe` command by commenting it out.
+
+## Extra Information
+I never ended up finishing every command on this bot. At the time I was managing 10+ other projects and didn't have enough time to finish this.
