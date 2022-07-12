@@ -27,6 +27,8 @@ bot.load_extension("Cogs.Commands.Universe")
 ## Events
 bot.load_extension("Cogs.Events.Events")
 
+# I understand I could've just done dir loops, but for accessabilities sake I chose this.
+
 ## Error Handling
 # bot.load_extension("Cogs.ErrorHandling.Global")
 
