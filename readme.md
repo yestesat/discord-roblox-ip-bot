@@ -34,4 +34,4 @@ I never ended up finishing every command on this bot. At the time I was managing
 
 Roblox deprecated the assetgame url I use to grab server information, so i'm going to public this bot.
 
-Looking back at my code, I should've named the `Classes` folder to `Modules` and removed all this capitalisation lol.
+Looking back at my code, I should've named the `Classes` folder to `Modules`, removed all this capitalisation, and used a better system of whitelisting lol.
