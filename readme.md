@@ -1,4 +1,4 @@
-# Roblox IP Bot - Python | Napalm
+# Discord Bot - Grab Roblox IPs and Ports | Napalm
 
 ## Setup
 Open `config.json` and sort everything out. It's all straight forwards besides `roles`.
