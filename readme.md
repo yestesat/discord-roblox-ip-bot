@@ -32,4 +32,4 @@ You just disabled the `universe` command by commenting it out.
 ## Extra Information
 I never ended up finishing every command on this bot. At the time I was managing 10+ other projects and didn't have enough time to finish this.
 
-This API used to grab server info such as Server IP's and PORT's. Not sure when but roblox deprecated the assetgame url I use. The API no longer grabs server information so I am just going to public this on github.
+Roblox deprecated the assetgame url I use to grab server information, so i'm going to public this bot.
