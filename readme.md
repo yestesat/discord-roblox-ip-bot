@@ -1,4 +1,4 @@
-# Roblox IP Bot - Python | Napalm++
+# Roblox IP Bot - Python | Napalm
 
 ## Setup
 Open `config.json` and sort everything out. It's all straight forwards besides `roles`.
@@ -18,7 +18,7 @@ Another thing to setup is the bot's activity. Navigate yourself to `main.py` and
 
 The second last thing to setup is your method for hitting roblox servers when using the `kill` command. Navigate to `main.py` and edit the `kill_method` variable correctly
 
-The last thing to setup is your booter api url. Navigate to `main.py` and edit it. If you do not understand how `.format` works in the way I used it, message me @ nathan#4567
+The last thing to setup is your booter api url. Navigate to `main.py` and edit it. If you do not understand how `.format` works in the way I used it, message me @ nathan#2400
 
 
 ## Tips
